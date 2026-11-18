@@ -1,0 +1,172 @@
+/* Zmienne i reset stylów */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a; /* Głęboki, nowoczesny ciemny odcień (Slate) */
+    color: #e2e8f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Nagłówek strony */
+.hero {
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+
+/* Siatka projektów (Kafelki) */
+main {
+    flex: 1;
+    padding: 20px 0 60px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* Karta projektu */
+.card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #475569;
+}
+
+.card.placeholder {
+    opacity: 0.75;
+    border-style: dashed;
+}
+
+.card-header {
+    margin-bottom: 16px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-top: 8px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+/* Etykiety (Badges) */
+.badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge.prod {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+}
+
+.badge.test {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+}
+
+.badge.future {
+    background-color: rgba(100, 116, 139, 0.15);
+    color: #94a3b8;
+}
+
+/* Przyciski */
+.card-links {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.btn.primary {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn.primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn.secondary {
+    background-color: #334155;
+    color: #e2e8f0;
+}
+
+.btn.secondary:hover {
+    background-color: #475569;
+}
+
+.btn.disabled {
+    background-color: #1e293b;
+    color: #64748b;
+    cursor: not-allowed;
+    border: 1px solid #334155;
+    font-size: 0.85rem;
+}
+
+/* Stopka */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #1e293b;
+    color: #64748b;
+    font-size: 0.85rem;
+}
